@@ -1,0 +1,96 @@
+##############  Basic Operation Information ###############################
+
+
+### Code dependency ####
+numpy
+sympy
+math
+cmath
+
+
+### Class ####
+
+Unc   [Class for real calculation]
+Ucom  [Class for complex calculation]
+
+Note: Ucom class will not work if Unc class is deleted due to inheritance
+
+
+### Basic Operator ####
+Operators
+
+ 	+	Addition operator
+ 	-	Subtraction operator
+ 	*	Multiplication operator
+ 	/	Division operator
+ 	**	Power/Exponent/Index operator
+ 	()	Parentheses
+
+
+### Custom function list ###
+
+    sqrt()              [Perform Square Root calculation]
+
+    ln()                [Perform Natural logarithm calculation]
+
+    ulog()              [Perform base-10 logarithm calculation]
+
+    uexp()              [Perform e^x calculation]
+
+    np.sin(param)       [Perform sin calculation]
+
+    np.cos(param)       [Perform cos calculation]
+
+    np.tan(param)       [Perform tan calculation]
+
+    cot()               [Perform cot calculation]
+
+    np.arcsin(param)    [Perform arc sin calculation]
+
+    np.arcos(param)     [Perform arc cos calculation]
+
+    np.arctan(param)    [Perform arc tan calculation]
+
+    np.sinh(param)      [Perform hyperbolic sin calculation]
+
+    np.cosh(param)      [Perform hyperbolic cos calculation]
+
+    np.tanh(param)      [Perform hyperbolic tan calculation]
+
+    np.arcsinh(param)   [Perform hyperbolic arc sin calculation]
+
+    np.arccosh(param)   [Perform hyperbolic arc cos calculation]
+
+    np.arctanh(param)   [Perform hyperbolic arc tan calculation]
+
+    degree(value, 'sin')[Perform trigonometric calculation on degree. can be sin, cos, tan]
+
+    statUnc()           [Perform statical uncertainty calculation ]
+
+    sum()               [Perform "Sum" on Uncertainties using propagation rule ]
+
+    comStatisticUnc()   [Perform complex statical uncertainty calculation ]
+
+    Csum()              [Perform "complex SUM" on uncertainty calculation ]
+
+
+
+################## Important parameter's ##############################
+1).
+
+Unc(parameter1,parameter2,'parameter3','parameter4','parameter5')
+
+parameter1         [Should be nominal value. Example: Unc(10) Could be numpy array. Example Unc(np.array([1, 2, 3])]
+
+parameter2         [Should be uncertainty. Example: Unc(10,0.2) Could be numpy array. Example Unc(np.array([0.,0.2,0.3],np.array([0.,0.2,0.3])] [note: If nominal value is used as array than uncertainty should also used  as array with same size ]
+
+parameter3         [Unc(2.0,0.1,''),Unc(2.0,0.1) For absolute uncertainty, Unc(2.0,0.1,'R') For relative uncertainty, Unc(2.0,0.1,'L') uncertainty with least significant digit ]
+
+parameter4         [Unc(2.0,0.1,'','Lab test 1') definition of category name. If we want to store in database]
+
+parameter5         [Unc(2.0,0.1,'','Lab test 1','Chemistry') definition of department name. If we want to store in database]
+
+Note: All uncertainty  calculation are calculated by default as absolute uncertainty.
+
+
+
